@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>フォームつくってみた</title>
+</head>
+<body>
+    <div class="full-container">
+        <div class="titlebox container">
+            <h1>フォームつくってみた</h1>
+        </div>
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf3qUv3eKahhAks0pfSld0XJE4Mp618o0bxlzaSsgFUmminlw/formResponse" method="POST" >
+            <div class="container">
+                <p>
+                    <label for="txt">テキストボックス</label>
+                </p>
+                <textarea name="entry.1104915258" id="txt" cols="300" rows="10" required="" onkeyup="showLength(value)" placeholder="回答を入力"></textarea>
+                <p class="words"><span id="words_length"></span>文字</p>
+            </div>
+            
+            <div class="container">
+                <p>
+                    <label for="radio">ラジオボタン</label>
+                </p>
+                <p>
+                    <input name="entry.706799207" id="radio" type="radio" value="a" required="">a</input>
+                </p>
+                <p>
+                    <input name="entry.706799207" id="radio" type="radio" value="b" required="">b</input>
+                </p>
+                <p>
+                    <input name="entry.706799207" id="radio" type="radio" value="c" required="">c</input>
+                </p>
+                <p>
+                    <input name="entry.706799207" id="radio" type="radio" value="d" required="">d</input>
+                </p>
+                <p>
+                    <input name="entry.706799207" id="radio" type="radio" value="e" required="">e</input>
+                </p>
+            </div>
+
+            <input type="submit" value="送信" class="submit" id="submit"/>
+
+        </form>
+    </div>
+
+    <script type="text/javascript" src="form.js"></script>
+    <!-- <iframe name="hidden_iframe" style="display:none;" id="hidden_iframe" onload="if(submitted)window.location = './submitted'"></iframe> -->
+</body>
+</html>
