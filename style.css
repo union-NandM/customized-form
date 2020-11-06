@@ -40,19 +40,43 @@ body {
     margin: 0;
 }
 
-.submit {
-    display: inline;
-    color: white;
+.btn {
     border-width: 0;
     border-radius: 5px;
-    background-color: #673ab7;
     height: 36px;
     width: 76.5px;
+
 }
+
+.submit {
+    color: white;
+    background-color: #673ab7;
+}
+
+.move {
+    color: #673ab7;
+    background-color: white;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.4);
+    margin-right: 10px;
+}
+
 
 .submit:hover {
     background-color: #7349bd;
     box-shadow: 0 1px 1px rgba(0,0,0,0.4);
+}
+
+.move:hover {
+    background-color: whitesmoke;
+
+}
+
+.section2 {
+    display: none;
+}
+
+.btn-holder {
+    display: flex;
 }
 
 @media (min-width: 711px) {
