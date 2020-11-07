@@ -40,6 +40,10 @@ body {
     margin: 0;
 }
 
+.small-font {
+    font-size: xx-small;
+}
+
 .btn {
     border-width: 0;
     border-radius: 5px;
