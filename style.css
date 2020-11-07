@@ -64,6 +64,10 @@ body {
     margin-right: 10px;
 }
 
+.Q2option {
+    display: inline-block;
+    width: 100%;
+}
 
 .submit:hover {
     background-color: #7349bd;
