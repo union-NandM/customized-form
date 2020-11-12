@@ -92,7 +92,3 @@ body {
         width: 550px;
     }
 }
-
-* {
-    touch-action: none;
-}
