@@ -19,8 +19,10 @@
 
     history.replaceState(null, null, './page1');
 
-    window.addEventListener('beforeunload', () => {
+    window.addEventListener('beforeunload', (e) => {
+        console.log('yaaa');
         history.replaceState(null, null, '');
+        e.preventDefault()
     });
 
     function transSection(disappear, appear) {
@@ -43,10 +45,6 @@
             $question2.style.boxShadow = normalStyle;
         });        
     });
-
-    stateObj = {
-        foo: 'bar'
-    }
 
     document.getElementById('goto2').addEventListener('click', () => {
         if ($txt.value.length !== 0) {
