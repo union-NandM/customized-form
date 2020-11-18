@@ -42,7 +42,6 @@
     document.getElementById('goto2').addEventListener('click', () => {
         if ($txt.value.length !== 0) {
             transSection($sect1, $sect2);
-            history.pushState(null, null, 'page2');
         } else {
             alert('必須項目に未入力の箇所があります。');
             $question1.style.boxShadow = errorStyle;
