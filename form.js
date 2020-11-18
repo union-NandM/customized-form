@@ -1,8 +1,9 @@
+
 (() => {
     const $words = document.getElementById('words_length');
 
-    const section1 = document.getElementsByClassName('section1');
-    const section2 = document.getElementsByClassName('section2');
+    const $sect1 = document.getElementById('sect1');
+    const $sect2 = document.getElementById('sect2');
 
     const radio = document.getElementsByClassName('radio');
 
@@ -16,9 +17,11 @@
     const normalStyle = '0 0 1px rgba(0,0,0,0.4)';
     const errorStyle = '0 0 7px rgba(255,0,0,0.7)';
 
+    history.replaceState(null, null, './page1');
+
     function transSection(disappear, appear) {
-        [].forEach.call(disappear, item => item.style.display = 'none');
-        [].forEach.call(appear, item => item.style.display = 'block');
+        disappear.classList.remove('active');
+        appear.classList.add('active');
     }
     
 
@@ -37,9 +40,14 @@
         });        
     });
 
+    stateObj = {
+        foo: 'bar'
+    }
+
     document.getElementById('goto2').addEventListener('click', () => {
         if ($txt.value.length !== 0) {
-            transSection(section1, section2);
+            transSection($sect1, $sect2);
+            history.pushState(null, null, 'page2');
         } else {
             alert('必須項目に未入力の箇所があります。');
             $question1.style.boxShadow = errorStyle;
@@ -47,7 +55,8 @@
     });
     
     document.getElementById('goto1').addEventListener('click', () => {
-        transSection(section2, section1);
+        // transSection($sect2, $sect1);
+        history.back();
     });
     
     document.customForm.addEventListener('submit', event => {
@@ -68,5 +77,7 @@
         }
         
     });
+
+
 
 })();
