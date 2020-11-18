@@ -21,7 +21,7 @@
 
     window.addEventListener('beforeunload', (e) => {
         console.log('yaaa');
-        history.replaceState(null, null, '');
+        history.replaceState(null, null, './');
         e.returnValue = '本当に更新するの？';
         return '本当に更新するの？';
     });
