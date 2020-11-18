@@ -19,6 +19,10 @@
 
     history.replaceState(null, null, './page1');
 
+    window.addEventListener('beforeunload', () => {
+        history.replaceState(null, null, '');
+    });
+
     function transSection(disappear, appear) {
         disappear.classList.remove('active');
         appear.classList.add('active');
@@ -55,7 +59,7 @@
     });
     
     document.getElementById('goto1').addEventListener('click', () => {
-        // transSection($sect2, $sect1);
+        transSection($sect2, $sect1);
         history.back();
     });
     
